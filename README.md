@@ -252,6 +252,64 @@ O projeto foi desenvolvido com base em um design do **Figma** com as seguintes e
 
 ---
 
+## 🤖 Programação Orientada a IA
+
+Este projeto foi desenvolvido explorando o conceito de **Programação Orientada a IA (AI-Oriented Programming)** — uma abordagem onde o desenvolvedor atua como **condutor das decisões** enquanto um agente de IA executa, sugere e refina o código em ciclos contínuos de colaboração.
+
+### O que é Programação Orientada a IA?
+
+É uma metodologia de desenvolvimento onde:
+
+- O desenvolvedor define **intenções e requisitos** em linguagem natural
+- A IA **propõe soluções**, gera código e toma decisões técnicas
+- O desenvolvedor **revisa, aprova ou redireciona** cada etapa
+- A IA **itera e corrige** com base no feedback recebido
+
+Diferente do uso pontual de IA para autocompletar trechos de código, aqui a IA participou ativamente de todo o ciclo de vida do projeto — do planejamento à execução.
+
+### Como foi aplicado neste projeto
+
+| Etapa | Participação da IA |
+|---|---|
+| **Análise do Figma** | A IA interpretou o design e mapeou os componentes necessários |
+| **Arquitetura** | A IA definiu a estrutura de pastas, estado global e fluxo de props |
+| **Criação dos componentes** | Todos os 5 componentes React foram gerados pela IA com base nos requisitos |
+| **Migração para Tailwind** | A IA criou um plano de migração, instalou dependências e reescreveu cada componente |
+| **Integração do Tailgrids** | A IA executou o CLI do Tailgrids, respondeu prompts interativos e configurou os tokens |
+| **Revisão e ajustes** | A cada etapa, o desenvolvedor revisou e direcionou as correções necessárias |
+| **Documentação** | Este próprio README foi gerado pela IA com base na estrutura real do projeto |
+
+### Fluxo de colaboração humano-IA
+
+```
+Desenvolvedor (intenção)
+        │
+        ▼
+    IA analisa o contexto
+        │
+        ▼
+    IA propõe e executa
+        │
+        ▼
+Desenvolvedor revisa/aprova
+        │
+        ▼
+    IA itera e refina
+        │
+        └──── repete até o objetivo ser atingido
+```
+
+### Benefícios observados
+
+- ⚡ **Velocidade:** todo o projeto foi estruturado e migrado em uma única sessão
+- 🎯 **Foco no que importa:** o desenvolvedor direcionou decisões de produto e design sem se perder em detalhes de implementação
+- 📐 **Consistência:** a IA manteve padrões de código e nomenclatura uniformes em todos os arquivos
+- 🔄 **Iteração rápida:** mudanças de requisito foram incorporadas sem retrabalho manual extenso
+
+> Este projeto é um exemplo prático de como a IA pode atuar como um **par de programação ativo**, elevando a produtividade e permitindo que o desenvolvedor concentre sua energia em decisões estratégicas.
+
+---
+
 ## 📄 Licença
 
 Projeto desenvolvido para fins de estudo. Livre para uso e modificação.
