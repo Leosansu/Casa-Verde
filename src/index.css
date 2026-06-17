@@ -1,0 +1,167 @@
+@import url('https://fonts.googleapis.com/css2?family=Elsie+Swash+Caps:wght@400;900&family=Montserrat:wght@300;400;500;600;700&display=swap');
+
+@import "tailwindcss";
+@plugin '@tailwindcss/forms';
+
+/* =====================================================
+   CASA VERDE — Design Tokens (fiel ao Figma)
+   ===================================================== */
+@theme {
+  /* Fontes */
+  --font-heading: 'Elsie Swash Caps', serif;
+  --font-body: 'Montserrat', sans-serif;
+  --font-sans: 'Montserrat', sans-serif;
+
+  /* Cores principais */
+  --color-primary-green: #1B4332;
+  --color-secondary-green: #2D6A4F;
+  --color-accent-gold: #FFB703;
+  --color-accent-gold-hover: #E09F00;
+
+  /* Cores de fundo */
+  --color-bg-cream: #FAF9F6;
+  --color-bg-white: #FFFFFF;
+
+  /* Cores de texto */
+  --color-text-dark: #1E293B;
+  --color-text-light: #64748B;
+
+  /* Bordas */
+  --color-border-light: #E2E8F0;
+
+  /* Border radius */
+  --radius-sm: 8px;
+  --radius-md: 12px;
+  --radius-lg: 24px;
+
+  /* Sombras */
+  --shadow-sm: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+  --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+  --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+  --shadow-premium: 0 20px 25px -5px rgba(27, 67, 50, 0.08), 0 10px 10px -5px rgba(27, 67, 50, 0.04);
+
+  /* Tailgrids required tokens (fallback neutros) */
+  --color-primary-50: #f0fdf4;
+  --color-primary-100: #dcfce7;
+  --color-primary-200: #bbf7d0;
+  --color-primary-300: #86efac;
+  --color-primary-400: #4ade80;
+  --color-primary-500: #2D6A4F;
+  --color-primary-600: #1B4332;
+  --color-primary-700: #14532d;
+  --color-primary-800: #166534;
+  --color-primary-900: #15803d;
+  --color-primary-950: #052e16;
+  --color-primary-text: white;
+  --color-neutral-brand-color: #2D6A4F;
+
+  --color-background-50: #FAF9F6;
+  --color-background-100: #f5f3ef;
+  --color-background-soft-50: #FAF9F6;
+  --color-background-soft-100: #f5f3ef;
+  --color-background-soft-200: #ede9e1;
+  --color-background-soft-300: #e2ddd3;
+  --color-background-soft-400: #d5cfc4;
+  --color-background-soft-500: #c8c1b4;
+
+  --color-foreground-50: #FFFFFF;
+  --color-foreground-100: #FFFFFF;
+  --color-foreground-soft-50: #FAF9F6;
+  --color-foreground-soft-100: #f5f3ef;
+  --color-foreground-soft-200: #ede9e1;
+  --color-foreground-soft-300: #e2ddd3;
+  --color-foreground-soft-400: #d5cfc4;
+  --color-foreground-soft-500: #c8c1b4;
+
+  --color-title-50: rgba(30, 41, 59, 0.8);
+  --color-text-50: #64748B;
+  --color-text-100: #64748B;
+  --color-text-200: #475569;
+  --color-text-300: #E2E8F0;
+
+  --color-white-100: #ffffff;
+  --color-white-90: rgba(255,255,255,0.9);
+  --color-white-80: rgba(255,255,255,0.8);
+  --color-white-70: rgba(255,255,255,0.7);
+  --color-white-60: rgba(255,255,255,0.6);
+
+  --color-error-500: #ef4444;
+  --color-success-500: #22c55e;
+  --color-warning-500: #FFB703;
+  --color-info-500: #0ea5e9;
+
+  --border-color-base-50: #E2E8F0;
+  --border-color-base-100: #cbd5e1;
+  --border-color-base-200: #94a3b8;
+  --border-color-base-300: #E2E8F0;
+
+  --color-button-primary-background: #1B4332;
+  --color-button-primary-hover-background: #2D6A4F;
+  --color-button-primary-text: #ffffff;
+  --color-button-secondary-background: #FAF9F6;
+  --color-button-secondary-hover-background: #E2E8F0;
+  --color-button-secondary-text: #1B4332;
+  --color-button-secondary-border-color: #2D6A4F;
+  --color-button-secondary-hover-border-color: #1B4332;
+  --color-background-success-600: #16a34a;
+  --color-chart-line: #E2E8F0;
+}
+
+/* =====================================================
+   RESETS GLOBAIS
+   ===================================================== */
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: var(--font-body);
+  background-color: var(--color-bg-cream);
+  color: var(--color-text-dark);
+  line-height: 1.6;
+  overflow-x: hidden;
+}
+
+/* =====================================================
+   ANIMAÇÕES CUSTOMIZADAS (não expressáveis via Tailwind)
+   ===================================================== */
+@keyframes blobby {
+  0%   { border-radius: 40% 60% 70% 30% / 40% 50% 60% 50%; }
+  100% { border-radius: 60% 40% 30% 70% / 60% 30% 40% 70%; }
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to   { opacity: 1; }
+}
+
+@keyframes scaleIn {
+  from { transform: scale(0.9); opacity: 0; }
+  to   { transform: scale(1); opacity: 1; }
+}
+
+@keyframes slideIn {
+  from { transform: translateY(100px); opacity: 0; }
+  to   { transform: translateY(0); opacity: 1; }
+}
+
+/* Classes de animação para uso em className */
+.animate-blobby {
+  animation: blobby 12s infinite ease-in-out alternate;
+}
+
+.animate-fadeIn {
+  animation: fadeIn 0.3s ease-out;
+}
+
+.animate-scaleIn {
+  animation: scaleIn 0.3s cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+
+.animate-slideIn {
+  animation: slideIn 0.3s ease-out;
+}
